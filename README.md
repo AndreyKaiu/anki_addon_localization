@@ -1,10 +1,10 @@
 # anki_addon_localization
 A method for localizing Anki add-ons using a special, translator-friendly format
 
-
-  Everyone has trouble translating programs into another language. I used ".json" before, but both AI and Google Translate love to break things—commas, quotation marks, and in some languages, even naming words without spaces doesn't save variables; it'll just translate them anyway.
+Everyone has trouble translating programs into another language. I used ".json" before, but both AI and Google Translate love to break things—commas, quotation marks, and in some languages, even naming words without spaces doesn't save variables; it'll just translate them anyway.
   
-So it's easier to tell the AI ​​not to translate lines starting with === or !!! at all. And in other lines to be translated, if you encounter the $ symbol, everything up to the next $ symbol can't be translated.
+So it's easier to tell the AI ​​not to translate lines starting with ```===``` or ```!!!``` at all. And in other lines to be translated, if you encounter the '$' symbol, everything up to the next '$' symbol can't be translated.
+
 At least that makes things a bit simpler.
 
 The first line contains: ```!!! === $ $ ; setting, block separator, variable start and end, comment start marker```
@@ -51,10 +51,13 @@ I always start the variable name "q_Card_internal" with a "q" so it's distinguis
 
 So it was like this:
 ```cGroup = contextMenu.newSubMenu("- Card internal -")```
+
 Of course, it could have been done like this:
 ```cGroup = contextMenu.newSubMenu(q("q_Card_internal"))```
+
 But it is still advisable to give the translator only the text without formatting, without leading and trailing spaces, so that when he needs to translate:
 ```cGroup = contextMenu.newSubMenu("*** Card internal ***")```
+
 then he won't have to create a new variable for translation and he can simply write:
 ```
 v_str = q("q_Card_internal") 
