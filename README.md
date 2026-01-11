@@ -1,7 +1,7 @@
 # anki_addon_localization
 A method for localizing Anki add-ons using a special, translator-friendly format
 
-<div>
+```
   Everyone has trouble translating programs into another language. I used ".json" before, but both AI and Google Translate love to break things—commas, quotation marks, and in some languages, even naming words without spaces doesn't save variables; it'll just translate them anyway.
 So it's easier to tell the AI ​​not to translate lines starting with === or !!! at all. And in other lines to be translated, if you encounter the $ symbol, everything up to the next $ symbol can't be translated.
 At least that makes things a bit simpler.
@@ -28,5 +28,5 @@ $company$ works
 !!! === $ $ ; let's return the setting
 === text3 ; output for three
 $text2$ The financial performance of $company$ is not very good. $text1$ has been having some difficulties lately!
-</code>
-</div>
+```
+
