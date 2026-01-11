@@ -14,7 +14,7 @@ and now, instead of $, you can use «Name of the block that can be inserted.»
 For more details, see the file "adv_settings.py," which you can run to see the example output.
 
 Here's the second test from there:
-<code>
+
 !!! === $ $ ; setting, block separator, variable start and end, comment start marker
 === company ; company information
 "Volkswagen Group"
