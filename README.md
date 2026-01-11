@@ -30,3 +30,31 @@ $company$ works
 $text2$ The financial performance of $company$ is not very good. $text1$ has been having some difficulties lately!
 ```
 
+In the actual code, I used the "q_NAME" format for the block (variable) name because the q key is easy to type, and the name is distinguishable.
+In the "lang.py" file, you can see that I also chose a function named q to get the translation, so now you can visually see where you're using the translation.
+Code example:
+```
+from .localization.lang import q
+
+v_str = q("q_Card_internal") 
+cGroup = contextMenu.newSubMenu(f"- {v_str} -")
+```
+
+I always start the variable name "q_Card_internal" with a "q" so it's distinguishable and translators don't get confused. I connect other words with underscores.
+So it was like this:
+```cGroup = contextMenu.newSubMenu("- Card internal -")```
+Of course, it could have been done like this:
+```cGroup = contextMenu.newSubMenu(q("q_Card_internal"))```
+But it is still advisable to give the translator only the text without formatting, without leading and trailing spaces, so that when he needs to translate:
+```cGroup = contextMenu.newSubMenu("*** Card internal ***")```
+then he won't have to create a new variable for translation and he can simply write:
+```
+v_str = q("q_Card_internal") 
+cGroup = contextMenu.newSubMenu(f"*** {v_str} ***")
+```
+
+
+
+
+
+
