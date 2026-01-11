@@ -8,14 +8,13 @@ At least that makes things a bit simpler.
 The first line contains: ```!!! === $ $ ; setting, block separator, variable start and end, comment start marker```
 This allows you to flexibly change the settings to accommodate any symbols convenient for your language or your text.
 Everything is easily typed in a text file; no need to specifically type "\n" for a new line. Of course, you need to ensure that your text doesn't contain the $ symbol or any other character (others, since it's not necessarily just one character, but one or more) you specify. Make sure the beginning of the line isn't the two specified words "!!!" and "===" (or any other words you specify). If the line contains the $ symbol, you can change the setting above, for example:
-```
-!!! === « » ;
+```!!! === « » ;```
 and now, instead of $, you can use «Name of the block that can be inserted.»
 
 For more details, see the file "adv_settings.py," which you can run to see the example output.
 
 Here's the second test from there:
-
+```
 !!! === $ $ ; setting, block separator, variable start and end, comment start marker
 === company ; company information
 "Volkswagen Group"
