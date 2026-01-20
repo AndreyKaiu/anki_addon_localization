@@ -47,7 +47,7 @@ def q(key: str, default: str = "") -> str:
 
 def get_translation(key: str, default: str = "") -> str:
     """Get translation for a key with optional default value (long function name _)"""
-    return _(key, default)
+    return q(key, default)
 
 def get_lang() -> str:
     """ Get the addon's localization language """
@@ -211,3 +211,4 @@ compatMapSort = sorted(
         ("vi", "vi_VN")
     ]
 )
+
